@@ -52,13 +52,12 @@ class Update(commands.Cog):
         tag = self.get_highest_role_with_tag(member.roles)
         nick = member.display_name
         split_nick = nick.split(" ", maxsplit=1)
-        print(split_nick)
 
         if len(split_nick) == 1:
-            print("Split is one item")
+
             if tag is None:
                 return
-            print("Split is two items")
+
             nick = f"[{tag}] {nick}"
 
         else:
